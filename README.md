@@ -69,5 +69,5 @@ Netlify Drop, or any static host. No environment variables, no secrets.
 
 ## Status
 
-MVP, complete and tested. Built as MUSE Project Factory run #177
+MVP, complete and tested. Built as MUSE Project Factory run #179
 (2026-10-29, 16:00 Asia/Dhaka slot).
