@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam Countdown BD — Never Miss an Exam Date</title>
+<meta name="description" content="Free offline exam countdown dashboard for Bangladeshi students. Add exams, watch the live countdown, and stay on track.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <div>
+      <h1>Exam Countdown BD</h1>
+      <p class="tagline" data-i18n="tagline"></p>
+    </div>
+    <button id="langBtn" class="btn ghost" type="button">&#2476;&#2494;&#2482;&#2494;</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <p id="stats" class="stats"></p>
+
+  <section id="hero" class="hero" aria-live="off"></section>
+
+  <section class="panel">
+    <h2 id="formTitle" data-i18n="addTitle"></h2>
+    <form id="examForm">
+      <label class="field">
+        <span data-i18n="addTitle" class="sr-only"></span>
+        <input id="nameInput" type="text" maxlength="120" data-i18n-ph="namePh" autocomplete="off">
+      </label>
+      <label class="field">
+        <span data-i18n="dateLabel"></span>
+        <input id="dateInput" type="datetime-local" required>
+      </label>
+      <div class="form-actions">
+        <button id="submitBtn" class="btn primary" type="submit" data-i18n="addBtn"></button>
+        <button id="cancelEditBtn" class="btn" type="button" data-i18n="cancelEdit"></button>
+      </div>
+    </form>
+  </section>
+
+  <section class="panel">
+    <div class="toolbar">
+      <input id="searchInput" type="search" data-i18n-ph="searchPh" autocomplete="off">
+      <div id="filters" class="filters">
+        <button class="btn small" type="button" data-filter="all" data-i18n="filterAll"></button>
+        <button class="btn small" type="button" data-filter="up" data-i18n="filterUp"></button>
+        <button class="btn small" type="button" data-filter="past" data-i18n="filterPast"></button>
+      </div>
+    </div>
+    <div id="list" class="list"></div>
+    <div class="io-actions">
+      <button id="exportBtn" class="btn" type="button" data-i18n="exportBtn"></button>
+      <label class="btn" for="importFile" data-i18n="importBtn"></label>
+      <input id="importFile" type="file" accept="application/json" hidden>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p data-i18n="footer"></p>
+</footer>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
